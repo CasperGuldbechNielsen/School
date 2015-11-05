@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="Hands_on_lab_4.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hands_on_lab_4"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontFamily="Segoe UI Light" FontSize="42" VerticalAlignment="Bottom" Margin="100,0,0,0" Grid.ColumnSpan="2" Text="Page Title" />
+        <Grid Grid.Row="1" Grid.Column="0" Margin="100,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="Aqua" Content="Button one"/>
+            <Button Grid.Row="0" Grid.Column="1" Background="Azure" Content="Button two"/>
+            <Button Grid.Row="1" Grid.Column="1" Background="BlanchedAlmond" Content="Button three"/>
+        </Grid>
+    </Grid>
+</Page>

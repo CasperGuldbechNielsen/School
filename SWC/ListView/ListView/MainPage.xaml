@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="ListView.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ListView"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:viewModel/>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="button" Content="Add" HorizontalAlignment="Left" Margin="424,100,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <Button x:Name="removeButton" Content="Remove" HorizontalAlignment="Left" Margin="477,100,0,228" VerticalAlignment="Top" Click="removeButton_Click" />
+        <Button x:Name="ClearAllButton" Content="Clear All" HorizontalAlignment="Left" Margin="424,137,0,191" Width="126" VerticalAlignment="Top" Click="ClearAllButton_Click" />
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="120,63,0,0" TextWrapping="Wrap" Text="My Notes" VerticalAlignment="Top"/>
+        <TextBox x:Name="noteToAdd" HorizontalAlignment="Left" Margin="225,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="325"/>
+        <ListView x:Name="MListView" Header="Notes"
+             ItemsSource="{Binding Notes,Mode=TwoWay}"
+             HorizontalAlignment="Left"
+             Height="341"
+             Margin="120,116,0,-97"
+             VerticalAlignment="Top" Width="228"/>
+
+
+    </Grid>
+</Page>

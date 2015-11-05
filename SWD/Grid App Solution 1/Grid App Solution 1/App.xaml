@@ -1,0 +1,15 @@
+﻿<Application
+    x:Class="Grid_App_Solution_1.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Grid_App_Solution_1"
+    xmlns:localData="using:Grid_App_Solution_1.Data">
+
+    <Application.Resources>
+
+        <!-- Application-specific resources -->
+
+        <x:String x:Key="AppName">Grid_App_Solution_1</x:String>
+
+    </Application.Resources>
+</Application>

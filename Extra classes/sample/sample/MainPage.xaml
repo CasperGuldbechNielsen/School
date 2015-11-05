@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:viewModel/>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView ItemsSource="{Binding Notes}" Margin="0,120,0,0" MaxHeight="600" Background="Blue">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10" >
+                        <Border Background="LightGray" Height="80" Width="300" Padding="20,10,10,10">
+                            <TextBlock Text="{Binding  Subject}" 
+                             Style="{StaticResource HeaderTextBlockStyle}" />
+                        </Border>
+                        <TextBlock Text="{Binding  NoteText}" 
+                             Style="{StaticResource BodyTextBlockStyle}" 
+                             Padding="20,0,0,0"/>
+                        <TextBlock Text="{Binding Datetime}" 
+                             Style="{StaticResource BodyTextBlockStyle}" 
+                             Padding="20,0,0,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid MaximumRowsOrColumns="3"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+        </GridView>
+    </Grid>
+</Page>
